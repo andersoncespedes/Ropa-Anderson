@@ -18,7 +18,7 @@ namespace Aplicacion.Repository
         }
         public async Task<IEnumerable<Insumo>> FindInsumo(string codigo){
             return  await _context.Set<Proveedor>().Include(e => e.Insumos)
-            .Where(e => e.NitProveedor == codigo)
+            .Where(e => e.NitProveedor == codigo && e.TipoPersona.Nombre.ToLower() ==  "persona juridica")
             .SelectMany(e => e.Insumos).ToListAsync();
         }
     }
