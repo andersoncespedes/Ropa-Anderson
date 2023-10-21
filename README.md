@@ -49,5 +49,33 @@ http://localhost:5022/api/User/addrole/
 ```
 http://localhost:5022/api/User/refresh-token/
 ```
-### Visualizar los Veterinarios Cuya Especialidad Sea Cirujano Vascular
+### Listar los insumos que pertenecen a una prenda especifica. El usuario debe ingresar el código de la prenda
 #### Endpoint
+```
+localhost:5118/api/Prenda/GetInsumo?Codigo=a
+```
+### Listar los Insumos que son vendidos por un determinado proveedor cuyo tipo de persona sea Persona Jurídica. El usuario debe ingresar el Nit de proveedor.
+#### Endpoint
+```
+localhost:5118/api/Proveedor/GetInsumo?Codigo=a
+```
+### Listar todas las ordenes de producción cuyo estado se en proceso.
+#### Endpoint
+```
+localhost:5118/api/Orden/ByEstado?
+```
+### Listar los empleados por un cargo especifico. Los cargos que se encuentran en la empresa son: Auxiliar de Bodega, Jefe de Producción, Corte, Jefe de bodega, Secretaria, Jefe de IT.
+#### Endpoint
+```
+localhost:5118/api/Empleado/getByCargo
+```
+### Listar las ordenes de producción que pertenecen a un cliente especifico.
+#### Endpoint
+```
+localhost:5118/api/Cliente/getSDataById/{id}
+```
+### Listar las ventas realizadas por un empleado especifico.
+#### Endpoint
+```
+localhost:5118/api/Cliente/getByVenta/{id}
+```
